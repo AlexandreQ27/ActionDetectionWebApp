@@ -1,0 +1,6 @@
+tensorflow==2.5.0 -i https://pypi.douban.com/simple/
+opencv-python
+mediapipe 
+sklearn
+scikit-learn 
+scipy
