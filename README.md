@@ -15,3 +15,5 @@ pip install -r requirements.txt
 
 ## Acknowledgement
 reference code:https://github.com/nicknochnack/ActionDetectionforSignLanguage
+
+frontend & backend part not done yet: https://github.com/JackWang0318/ActionDetectDemo_whj
