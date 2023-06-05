@@ -5,7 +5,7 @@ Course Project  --ML01 Machine Learning, UTSEUS, Shanghai University
 Group members: Yibo QIU, Zhicheng DAI, Hongjie WANG
 
 ## Example
-![iloveyou]https://github.com/AlexandreQ27/ActionDetectionDemo/blob/main/example/iloveyou.png
+![iloveyou](https://github.com/AlexandreQ27/ActionDetectionDemo/blob/main/example/iloveyou.png)
 
 ## Frontend
 pip install -r requirements_frontend.txt
