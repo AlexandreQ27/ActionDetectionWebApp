@@ -17,7 +17,7 @@ from sklearn.metrics import multilabel_confusion_matrix, accuracy_score
 DATA_PATH = os.path.join('C:\\Users\\14471\\Desktop\\ActionDetectionDemo\\MP_Data') 
 log_dir = os.path.join('C:\\Users\\14471\\Desktop\\ActionDetectionDemo\\weight')
 # Actions that we try to detect
-actions = np.array(['hello', 'thanks', 'iloveyou'])
+actions = np.array(['hello', 'thanks', 'iloveyou','ihateyou'])
 
 # Thirty videos worth of data
 no_sequences = 30
@@ -26,9 +26,9 @@ no_sequences = 30
 sequence_length = 30
 
 # Folder start
-start_folder = 30
+start_folder = 1
 
-colors = [(245,117,16), (117,245,16), (16,117,245)]
+colors = [(245,117,16), (117,245,16), (16,117,245),(255, 0, 255)]
 
 #------------------Keypoints using MP Holistic------------------
 mp_holistic = mp.solutions.holistic # Holistic model
@@ -77,7 +77,6 @@ def extract_keypoints(results):
     rh = np.array([[res.x, res.y, res.z] for res in results.right_hand_landmarks.landmark]).flatten() if results.right_hand_landmarks else np.zeros(21*3)
     return np.concatenate([pose, face, lh, rh])
 
-colors = [(245,117,16), (117,245,16), (16,117,245)]
 def prob_viz(res, actions, input_frame, colors):
     output_frame = input_frame.copy()
     for num, prob in enumerate(res):
@@ -105,6 +104,7 @@ X = np.array(sequences)
 # one-hot coding
 onehot_encoder = OneHotEncoder(sparse=False)
 y = onehot_encoder.fit_transform(y_integer.reshape(-1, 1))
+print(y)
 #y = to_categorical(labels).astype(int)
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.05)
 
@@ -126,12 +126,12 @@ model.compile(optimizer='Adam', loss='categorical_crossentropy', metrics=['categ
 model.summary()
 
 #---------------------Make Prediction---------------------
-# res = model.predict(X_test)
-# actions[np.argmax(res[4])]
-# actions[np.argmax(y_test[4])]
+res = model.predict(X_test)
+actions[np.argmax(res[4])]
+actions[np.argmax(y_test[4])]
 
 #---------------------Save Weight---------------------
-#model.save('action.h5')
+# model.save('action.h5')
 #del model
 model.load_weights('action.h5')
 
