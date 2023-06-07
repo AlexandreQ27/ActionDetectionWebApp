@@ -1,6 +1,9 @@
-tensorflow==2.5.0 -i https://pypi.douban.com/simple/
+tensorflow==2.8.0 
+streamlit
 opencv-python
 mediapipe 
 sklearn
 scikit-learn 
 scipy
+av
+
