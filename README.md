@@ -6,7 +6,9 @@ Group members: Yibo QIU, Zhicheng DAI, Hongjie WANG
 
 ## Goal
 Our group builds a machine-learning web application based on streamlit framework. 
+
 Its goal is to detect the action composed of our hands and head, 
+
 and in the meanwhile recognize the corresponding meaning by printing on the screen.
 
 
