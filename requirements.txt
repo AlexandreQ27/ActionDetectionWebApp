@@ -2,8 +2,6 @@ tensorflow==2.8.0
 streamlit
 opencv-python
 mediapipe 
-sklearn
 scikit-learn 
 scipy
-av
 

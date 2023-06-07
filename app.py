@@ -5,7 +5,6 @@ import numpy as np
 from PIL import Image
 import requests
 import mediapipe as mp
-import av
 
 #app lib
 from matplotlib import pyplot as plt
@@ -21,7 +20,7 @@ from sklearn.metrics import multilabel_confusion_matrix, accuracy_score
 
 #import demo as dm
 # Actions that we try to detect
-actions = np.array(['hello', 'thanks', 'iloveyou'])
+actions = np.array(['hello', 'thanks', 'iloveyou', 'ihateyou'])
 
 # Thirty videos worth of data
 no_sequences = 30
@@ -32,7 +31,7 @@ sequence_length = 30
 # Folder start
 start_folder = 30
 
-colors = [(245,117,16), (117,245,16), (16,117,245)]
+colors = [(245,117,16), (117,245,16), (16,117,245), (255, 0, 255)]
 
 #------------------Keypoints using MP Holistic------------------
 mp_holistic = mp.solutions.holistic # Holistic model
