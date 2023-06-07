@@ -22,5 +22,8 @@ and in the meanwhile recognize the corresponding meaning by printing on the scre
 ## App Execu.
 ```streamlit run app.py```
 
+## Example
+<img src="example/iloveyou.png" alt="example" width="400px" height="auto">
+
 ## Acknowledgement
 reference code: https://github.com/nicknochnack/ActionDetectionforSignLanguage
