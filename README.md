@@ -25,5 +25,10 @@ and in the meanwhile recognize the corresponding meaning by printing on the scre
 ## Example
 <img src="example/webapp.png" alt="example">
 
+## Web App 
+http://101.43.94.61:8888/
+
+Click and play around!
+
 ## Acknowledgement
 reference code: https://github.com/nicknochnack/ActionDetectionforSignLanguage
